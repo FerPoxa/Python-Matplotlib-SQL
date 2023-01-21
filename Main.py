@@ -3,22 +3,22 @@ import mysql.connector as msqc
 
 VENTAS=[]
 NOMBRES=[]
-connect = msqc.connect(user='admin', password='pass',
-                              host='10.105.15.152',
-                              database='GAME')
+connect = msqc.connect(user='user', password='password',
+                              host='IP',
+                              database='database')
 cursor = connect.cursor()
 
-query = ("SELECT ID,VENTAS FROM JUEGARDOS")
+query = ("SELECT coumn1,coumn2 FROM table1")
 cursor.execute(query);
 
 
 for i in cursor:
-    VENTAS.append(i[0])
-    NOMBRES.append(i[1])
+    coumn1.append(i[0])
+    coumn2.append(i[1])
 
-plt.bar(VENTAS,NOMBRES)
+plt.bar(coumn1,coumn2)
 plt.ylim(0, 100000)
-plt.ylabel("Ventas")
-plt.xlabel("Nombre")
-plt.title("Datos")
+plt.ylabel("label")
+plt.xlabel("label")
+plt.title("Data")
 plt.show()
