@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import mysql.connector as msqc
 
-VENTAS=[]
-NOMBRES=[]
+coumn1=[]
+coumn2=[]
 connect = msqc.connect(user='user', password='password',
                               host='IP',
                               database='database')
